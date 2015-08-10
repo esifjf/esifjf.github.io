@@ -70,20 +70,24 @@
   <!-- Career -->
   <section id="career" class="container">
     <div class="center">
-      <h2>Pellentesque habitant morbi tristique senectus et netus</h2>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      <h2>A Ferramenta Easy Cyclomatic Complexity (ECC)</h2>
     </div>
     <hr>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-    
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet</p>
+      <p>Uma ferramenta desenvolvida na linguagem Java com o objetivo de analisar métodos de uma determinada classe Java e gerar seu Grafo de Controle de Fluxo correspondente. Ela fornece as seguintes funções:</p>
+        <ul class="arrow">
+         <li>Deve gerar um grafo da Complexidade Ciclomática para cada método da classe analisada</li>
+         <li>Deve permitir ao desenvolvedor navegar pelos caminhos independentes dos grafos gerados</li>
+         <li>Deve fornecer uma análise sobre os grafos gerados contendo caminhos independentes, condições para que esses caminhos sejam satisfeitos e a Complexidade Ciclomática do método analisado</li>
+         <li>Deve facilitar o entendimento do grafo através da indicação do trecho de código correspondente a cada vértice</li>
+       </ul>
+      <p>A funcionamento da ferramenta pode ser dividido em etapas, são essas: <em>Scanner</em>, <em>Parser</em>, <em>Renderer</em> e <em>Analysis</em>.</p>
     
     <hr>
 
     <div class="row-fluid">
       <!-- Left Column -->
       <div class="span6">
-        <h3>Creative Designer</h3>
+        <h3>Scanner</h3>
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
         <h4>Requirements</h4>
         <ul class="arrow">
@@ -97,7 +101,7 @@
 
        <hr>
 
-       <h3>Technical Writter</h3>
+       <h3>Parser</h3>
        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
        <h4>Requirements</h4>
        <ul class="arrow">
@@ -114,7 +118,7 @@
 
      <!-- Right Column -->
      <div class="span6">
-      <h3>Web Developer</h3>
+      <h3>Renderer</h3>
       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
       <h4>Requirements</h4>
       <ul class="arrow">
@@ -128,7 +132,7 @@
 
      <hr>
 
-     <h3>Marketing Manager</h3>
+     <h3>Analysis</h3>
      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
      <h4>Requirements</h4>
      <ul class="arrow">
@@ -142,7 +146,53 @@
 
    </div>
    <!-- /Right Column -->
+   <hr>
 
+    <section id="portfolio">
+        <ul class="gallery col-2">
+            <li>
+                <div class="preview">
+                    <img alt=" " src="/images/screenshots/easyCyclomaticComplexity/img01.JPG">
+                    <div class="overlay">
+                    </div>
+                    <div class="links">
+                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h5>Lorem ipsum dolor sit amet</h5>
+                    <small>Portfolio item short description</small>
+                </div>
+                <div id="modal-1" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
+                        <img src="/images/screenshots/easyCyclomaticComplexity/img01.JPG" alt=" " width="100%" style="max-height:400px">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="preview">
+                    <img alt=" " src="/images/screenshots/easyCyclomaticComplexity/img02.JPG">
+                    <div class="overlay">
+                    </div>
+                    <div class="links">
+                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h5>Lorem ipsum dolor sit amet</h5>
+                    <small>Portfolio item short description</small>
+                </div>
+                <div id="modal-1" class="modal hide fade">
+                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
+                    <div class="modal-body">
+                        <img src="/images/screenshots/easyCyclomaticComplexity/img02.JPG" alt=" " width="100%" style="max-height:400px">
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </section>
  </div>
  <p>&nbsp;</p>
 
