@@ -89,30 +89,12 @@
       <!-- Left Column -->
       <div class="span6">
         <h3>Scanner</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-        <h4>Requirements</h4>
-        <ul class="arrow">
-         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-         <li>Vestibulum auctor dapibus neque.</li>
-         <li>Lorem ipsum dolor sit amet adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-         <li>Vestibulum auctor dapibus neque.</li>
-       </ul>
+        <p>Para essa atividade, é utilizada uma biblioteca de código fonte aberto <a href="https://github.com/javaparser/javaparser">JavaParser</a>. A biblioteca é capaz de ler arquivos de código fonte na linguagem Java e disponibilizar uma Abstract Syntax Tree (AST), representando a estrutura do código fonte lido e possibilitando a coleta de informações sobre o mesmo.</p>
 
        <hr>
 
        <h3>Parser</h3>
-       <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-       <h4>Requirements</h4>
-       <ul class="arrow">
-         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-         <li>Vestibulum auctor dapibus neque.</li>
-         <li>Lorem ipsum dolor sit amet adipiscing elit.</li>
-         <li>Aliquam tincidunt mauris eu risus.</li>
-         <li>Vestibulum auctor dapibus neque.</li>
-       </ul>
+       <p>Nessa atividade é necessário processar a AST para gerar uma estrutura de grafos que represente o código fonte. Para isso, é utilizado um Recursive Descent Parser que permite processar a AST a partir de regras para blocos de comando. Foram criadas regras para os seguintes blocos de comando: if / else, switch / case, for-each, for, while, do-while, return, break.</p>
 
      </div>
      <!-- /Left Column -->
@@ -120,29 +102,15 @@
      <!-- Right Column -->
      <div class="span6">
       <h3>Renderer</h3>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-      <h4>Requirements</h4>
-      <ul class="arrow">
-       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
-       <li>Vestibulum auctor dapibus neque.</li>
-       <li>Lorem ipsum dolor sit amet adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
-       <li>Vestibulum auctor dapibus neque.</li>
-     </ul>
+      <p>A partir do momento que se tem a estrutura do grafo da Complexidade Ciclomática, deve-se renderizá-lo na tela para o usuário. Para isso, utiliza-se a biblioteca <a href="http://jung.sourceforge.net/">JUNG (Java Universal Network/Graph Framework</a>, também de código aberto. </p>
 
      <hr>
 
      <h3>Analysis</h3>
-     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-     <h4>Requirements</h4>
+     <p>Possuindo o grafo renderizado, é possível realizar análises estáticas sobre o mesmo. Exemplo de análise é a geração dos caminhos independentes e cálculo da Complexidade Ciclomática. Para a geração dos caminhos independentes, é usado um método conhecido como baseline method:</p>
      <ul class="arrow">
-       <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
-       <li>Vestibulum auctor dapibus neque.</li>
-       <li>Lorem ipsum dolor sit amet adipiscing elit.</li>
-       <li>Aliquam tincidunt mauris eu risus.</li>
-       <li>Vestibulum auctor dapibus neque.</li>
+       <li>partindo do nó inicial até o nó final do grafo, calcula-se o caminho mais à esquerda (leftmost path), chamado de caminho base;</li>
+       <li>a partir do caminho base, para cada nó predicado, cria-se um novo caminho invertendo a condição do nó. Repete-se esse passo enquanto houverem nós predicados que não foram invertidos. Ao final, tem-se um caminho base somado à quantidade de caminhos independentes derivados (de acordo com a existência de nós predicados no grafo).</li>
      </ul>
 
    </div>
@@ -177,14 +145,14 @@
                     <div class="overlay">
                     </div>
                     <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a>
+                        <a data-toggle="modal" href="#modal-2"><i class="icon-eye-open"></i></a>
                     </div>
                 </div>
                 <!--<div class="desc">
                     <h5>Lorem ipsum dolor sit amet</h5>
                     <small>Portfolio item short description</small>
                 </div>-->
-                <div id="modal-1" class="modal hide fade">
+                <div id="modal-2" class="modal hide fade">
                     <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
                     <div class="modal-body">
                         <img src="/images/screenshots/easyCyclomaticComplexity/img02.jpg" alt=" " width="100%">
