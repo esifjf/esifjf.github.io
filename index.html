@@ -1,145 +1,392 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Início</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/sl-slide.css">
-
-    <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Início</title>
+	<link rel="shortcut icon" href="images/ico/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="js/carrega-pagina.js"></script>
+	<script type="text/javascript">checkLanguage('index_');</script>
 </head>
 
-<body>
+<body onload="setLanguage(localStorage.getItem('file_name'),localStorage.getItem('language'));">
+	<div id="result"></div>
+	<!-- MENU -->
+	<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+	<nav id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+			<li class="sidebar-brand">
+				<p>IF Sudeste MG</p>
+			</li>
+			<li>
+				<a href="#top" class="idioma link" onclick=$("#menu-close").click();>Início</a>
+			</li>
+			<li>
+				<a href="#sobre" class="idioma" onclick=$("#menu-close").click();>Sobre</a>
+			</li>
+			<li>
+				<a href="#estudos" class="idioma" onclick=$("#menu-close").click();>Estudos</a>
+			</li>
+			<li>
+				<a href="#publicacoes" class="idioma" onclick=$("#menu-close").click();>Publicações</a>
+			</li>
+			<li>
+				<a href="#premios" class="idioma" onclick=$("#menu-close").click();>Prêmios</a>
+			</li>
+			<li>
+				<a href="#time" class="idioma" onclick=$("#menu-close").click();>Nosso time</a>
+			</li>
+			<li>
+				<a href="#contato" class="idioma" onclick=$("#menu-close").click();>Contato</a>
+			</li>
+		</ul>
+	</nav>
+		
+	<!-- HEADER -->
+	<header id="top" class="header">
+		<div class="bg-header">
+			<div class="flag">
+				<span onclick="setLanguage('index_','pt_br')"><img src="images/language/pt.png" alt="português Brasil"></span>
+				<span onclick="setLanguage('index_','en')"><img src="images/language/en.png" alt="inglês"></span>
+			</div>
+			<div class="logo"><img src="images/logo.png" alt="Logo IF Sudeste MG"></div>
+			<div class="text-vertical-center header-info">
+				<h2 class="idioma"></h2>
+				<h3>IF Sudeste MG</h3><br>
+				<a href="#sobre" class="down">
+					<div class="fa-stack fa-1x default-color">
+						<i class="fa fa-angle-down fa-stack-2x text-primary default-color"></i>
+					</div>
+				</a>
+			</div>
+		</div>
+	</header>
 
-    <!--Header-->
-  <header class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a id="logo" class="pull-left" href="/"></a>
-        <div class="nav-collapse collapse pull-right">
-          <ul class="nav">
-            <li class="active"><a href="/index.html">Início</a></li>
-            <li><a href="/publicacoes.html">Publicações</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Estudos<i class="icon-angle-down"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="/ferramentas/easyCyclomaticComplexity/ferramenta.html">EasyCyclomaticComplexity</a></li>
-                <!--<li class="divider"></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-                <li><a href="terms.html">Terms of Use</a></li>-->
-              </ul>
-            </li>
-            <li><a href="/sobre.html">Sobre Nós</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-  </header>
-    <!-- /header -->
-    <section id="career" class="container">
-    <div class="center">
-      <h2>Grupo de Pesquisa de Engenharia de Software - IF Sudeste MG</h2>
-      <p>Este site tem como objetivo principal documentar e arquivar os Projetos sobre Engenharia de Software do Doutor Marco Antônio Pereira Araújo e dos bolsistas citados <a href="sobre.html">aqui</a>. </p>
-    </div>
-    <hr>
-        <p>As páginas possuem um detalhamento de ferramentas e outros produtos da pesquisa realizada no Instituto Federal de Educação, Ciência e Tecnologia financiado pelo setor de Pesquisa da faculdade. As mesmas são documentadas, informando os experimentos realizados com turmas e as respectivas revisões sistemáticas sobre o assunto abordado.</p>
-</section>
+	<!-- SOBRE / ABOUT -->
+	<section id="sobre" class="sobre">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="idioma">Detalhamento de ferramentas e outros produtos da pesquisa realizada no Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais - Campus Juiz de Fora.</h2>
+					<hr class="small">
+					<!-- <p class="idioma lead">As mesmas são documentadas, informando os experimentos realizados com turmas e as respectivas revisões sistemáticas sobre o assunto abordado.</p> -->
+					<p class="idioma lead">
+						A linha de pesquisa em Engenharia de Software do IF Sudeste MG tem o objetivo de atuar no desenvolvimento e disseminação de tecnologias de software em benefício da sociedade brasileira e comunidades de pesquisa científica. O desenvolvimento de pesquisas científicas realizadas nas áreas de qualidade de software, manutenção e evolução de software, verificação, validação e testes de software, engenharia de software experimental e simulação é o foco de atuação deste grupo.
+					</p>
+					<!-- <p class="lead">Este site tem como objetivo principal documentar e arquivar os Projetos sobre Engenharia de Software do Doutor Marco Antônio Pereira Araújo e dos bolsistas citados aqui.</p> -->
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!--Bottom-->
-<section id="bottom" class="main">
-  <!--Container-->
-  <div class="container">
+	<!-- ESTUDOS / RESEARCH -->
+	<section id="estudos" class="estudos bg-primary default-color-bg">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-10 col-lg-offset-1">
+					<h1 class="idioma">Estudos</h1>
+					<hr class="small">
+					<div class="col-md-12 col-sm-12">
+						<div class="estudo-item">
+							<span class="fa-stack fa-3x ferramenta">
+								 <i class="devicon-java-plain fa-stack-2x"></i>
+							</span>
+							<h4 class="idioma tipo-ferramenta">Complexity Tool</h4>
+							<p class="idioma">Ferramenta para Medir Complexidade Ciclomática de Métodos Java.</p>
+							<a href="ferramentas/complexity-tool.html" class="idioma btn btn-light">Saiba mais</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!--row-fluids-->
-    <div class="row-fluid">
-
-      <!--Contact Form-->
-      <div class="span12">
-        <h4>Endereço</h4>
-        <ul class="unstyled address">
-          <li>
-            <i class="icon-home"></i><strong>Endereço:</strong> Rua Bernardo Mascarenhas, 1283 - Bairro Fábrica<br>Juiz de Fora, MG. CEP: 36080-001
-          </li>
-          <li>
-            <i class="icon-envelope"></i>
-            <strong>Email: </strong> support@email.com
-          </li>
-          <li>
-            <i class="icon-globe"></i>
-            <strong>Site Institucional:</strong> www.jf.ifsudestemg.edu.br/
-          </li>
-          <li>
-            <i class="icon-phone"></i>
-            <strong>Telefone:</strong> (32) 4009-3003
-          </li>
-        </ul>
-      </div>
-      <!--End Contact Form-->
-
-      <!--Important Links-->
-<!--      <div id="tweets" class="span3">
-        <h4>OUR COMPANY</h4>
-        <div>
-          <ul class="arrow">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Copyright</a></li>
-            <li><a href="#">We are hiring</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-      </div>
-      <!--Important Links-->
-
-      <!--Archives-->
-<!--      <div id="archives" class="span3">
-        <h4>ARCHIVES</h4>
-        <div>
-          <ul class="arrow">
-            <li><a href="#">December 2012 (1)</a></li>
-            <li><a href="#">November 2012 (5)</a></li>
-            <li><a href="#">October 2012 (8)</a></li>
-            <li><a href="#">September 2012 (10)</a></li>
-            <li><a href="#">August 2012 (29)</a></li>
-            <li><a href="#">July 2012 (1)</a></li>
-            <li><a href="#">June 2012 (31)</a></li>
-          </ul>
-        </div>
-      </div>
-      <!--End Archives-->
-    </div>
-    <!--/row-fluid-->
-  </div>
-  <!--/container-->
-
-</section>
-<!--/bottom-->
+	<!-- PUBLICAÇÕES / PUBLICATIONS -->
+	<aside id="publicacoes" class="publicacoes">
+		<div class="titulo-publicacao">
+			<h1 class="idioma">Publicações</h1>
+			<hr class="small">
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="idioma alinha">Conferências</h1>
+			<h1 class="alinha"><i class="fa fa-bar-chart" aria-hidden="true"></i></h1>
+			<h3>CAMPOS JUNIOR, H. S.; MARTINS FILHO, L. R. V. ; ARAUJO, M. A. P. . Uma ferramenta interativa para visualização de código fonte no apoio à construção de casos de teste unitário. In: BRAZILIAN WORKSHOP ON SYSTEMATIC AND AUTOMATED SOFTWARE TESTING, 2015, Belo Horizonte. Proceedings of the BRAZILIAN WORKSHOP ON SYSTEMATIC AND AUTOMATED SOFTWARE TESTING, 2015.</h3>
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="idioma alinha">Periódicos</h1>
+			<h1 class="alinha"><i class="fa fa-newspaper-o" aria-hidden="true"></i></h1>
+			<h3>CAMPOS JUNIOR, H. S.; PRADO, A. F. ; ARAÚJO, MARCO ANTÔNIO PEREIRA . Complexity Tool: Uma Ferramenta para Medir Complexidade Ciclomática de Métodos Java. Multiverso: Revista Eletrônica do Campus Juiz de Fora - IF Sudeste MG, v. 1, p. 66-76, 2016.</h3>
+			<h1 class="alinha"><i class="fa fa-newspaper-o" aria-hidden="true"></i></h1>
+			<h3>Campos Junior, H. S., Martins Filho, L. R. V., Araújo, M. A. P. (2016) An Approach for Detecting Unnecessary Cyclomatic Complexity on Source Code. IEEE Latin America Transactions, vol. 14, no. 8.</h3>
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="idioma alinha">Resumos e pôsteres</h1>
+			<h1 class="alinha"><i class="fa fa-file-text-o" aria-hidden="true"></i></h1>
+			<h3>CAMPOS JUNIOR, H. S.; Prado, A. F. ; ARAUJO, M. A. P. . Complexity Tool: Ferramenta para medir complexidade ciclomática de Métodos Java.  In: IV Seminário de Iniciação Científica do IF Sudeste MG Campus Juiz de Fora, 2014, Juiz de Fora. Anais do IV Seminário de Iniciação Científica do IF Sudeste MG Campus Juiz de Fora, 2014.</h3>
+			<h1 class="alinha"><i class="fa fa-file-text-o" aria-hidden="true"></i></h1>
+			<h3>MARTINS FILHO, L. R. V. ; CAMPOS JUNIOR, H. S. ; ARAUJO, M. A. P. . Uma Ferramenta de Apoio à Construção de Teste de Unidade através da Geração de Grafos de Fluxo de Controle. In: II SIMEPE - Simpósio de Ensino, Pesquisa e Extensão do IF Sudeste MG, 2015, Barbacena. Anais do II SIMEPE, 2015.</h3>
+			<h1 class="alinha"><i class="fa fa-file-text-o" aria-hidden="true"></i></h1>
+			<h3>CAMPOS JUNIOR, H. S.; MARTINS FILHO, L. R. V. ; ARAUJO, M. A. P. . UMA ABORDAGEM PARA OTIMIZAÇÃO DA QUALIDADE DE CÓDIGO FONTE BASEADO NA COMPLEXIDADE ESTRUTURAL. In: V Seminário de Iniciação Científica do IF Sudeste MG Campus Juiz de Fora, 2015, Juiz de Fora. Anais do V Seminário de Iniciação Científica do IF Sudeste MG Campus Juiz de Fora, 2015.</h3>
+			<h1 class="alinha"><i class="fa fa-file-text-o" aria-hidden="true"></i></h1>
+			<h3>CAMPOS JUNIOR, H. S.; MARTINS FILHO, L. R. V. ; ARAUJO, M. A. P. . Uma Abordagem para Otimização da Qualidade de Código Fonte Baseado na Complexidade Estrutural. In: Jornada Nacional de Iniciação Científica - 68a. Reunião Anual da SBPC, 2016, Porto Seguro/BA. Anais da Jornada Nacional de Iniciação Científica - 68a. Reunião Anual da SBPC 2016, 2016.</h3>
+		</div>
+	</aside>
 
 
-<script src="/js/vendor/jquery-1.9.1.min.js"></script>
-<script src="/js/vendor/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
+	<!-- PRÊMIOS / AWARDS -->
+	<section id="premios" class="premios">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<span class="fa-stack fa-3x">
+						<i class="fa fa-trophy fa-stack-2x" aria-hidden="true"></i>
+						<!--<img class="fa-stack-2x" src="images/trofeu.png" alt="Prêmios">-->
+					</span>
+					<h1 class="idioma">Prêmios</h1>
+					<hr class="small">
+					<div class="row itens">
+						<div class="col-md-6">
+							<h1>2014</h1>
+							<div class="premios-item">
+								<img class="img-premios img-responsive" src="images/premios/iv_seminario_iniciacao_cientifica_2014.jpg">
+								<div class="img-responsive"><h2 class="idioma img-premios img-responsive text-vertical-center">2º Lugar (poster) IV Seminário de Iniciação Científica, Instituto Federal Sudeste Minas Gerais - Campus JF.</h2></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h1>2015</h1>
+							<div class="premios-item">
+								<img class="img-premios img-responsive" src="images/premios/sast_2015.jpg">
+								<div class="img-responsive"><h2 class="idioma img-premios img-responsive text-vertical-center">Segundo melhor artigo - SAST / CBSoft, PUC-MG / UFMG / CEFET-MG.</h2></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h1>2015</h1>
+							<div class="premios-item">
+								<img class="img-premios img-responsive" src="images/premios/1o_concurso_inovacao_2015.jpg">
+								<div class="img-responsive"><h2 class="idioma img-premios img-responsive text-vertical-center">Primeiro lugar no Concurso de Produtos, Processos e Serviços Inovadores, II SIMEPE, IF Sudeste MG.</h2></div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<h1>2016</h1>
+							<div class="premios-item">
+								<img class="img-premios img-responsive" src="images/premios/v_seminario_iniciacaoCientifica_2016.jpg">
+								<div class="img-responsive"><h2 class="idioma img-premios img-responsive text-vertical-center">1º lugar na apresentação de pôster na área de Ciência da Computação, V Seminário de Iniciação Científica do IF Sudeste MG Campus Juiz de Fora.</h2></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+	<!-- NOSSO TIME / OUR TEAM -->
+	<aside id="time" class="quem-somos">
+		<div class="text-vertical-center resumo">
+			<h1 class="idioma">Quem nós somos?</h1>
+			<h3 class="idioma">Somos um grupo de estudantes do IF Sudeste MG - Campus de Juiz de Fora, formado por alunos dos cursos de Bacharelado de Sistemas de Informação e Técnico em Informática, orientados pelo professor Marco Antônio Pereira Araújo.</h3>
+		</div>
+	</aside>
+	<section class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 conteudo">
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team1.jpg" class="img-responsive">
+							<ul class="text-center">
+								<li class="idioma">Doutor e Mestre em Engenharia de Sistemas e Computação pela COPPE/UFRJ. Especialista em Métodos Estatísticos Computacionais e Bacharel em Matemática com Habilitação em Informática pela UFJF. Professor Adjunto da UFJF. Professor do IF Sudeste MG - Campus Juiz de Fora.</li>
+							</ul>
+						</div>
+						<h1>Marco Antônio Pereira Araújo</h1>
+						<h2 class="idioma">Orientador</h2>
+						<a href="http://lattes.cnpq.br/8908009613435024" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team2.jpg" class="img-responsive">
+							<ul class="text-center">
+							<li class="idioma">Cursa Mestrado em Ciência da Computação na UFJF. Bacharel em Sistemas de Informação pelo IF Sudeste MG - Campus Juiz de Fora. Atua com pesquisa em Engenharia de Software na linha de Manutenção e Evolução de Software.</li>
+							</ul>
+						</div>
+						<h1>Heleno S. Campos Júnior</h1>
+						<h2 class="idioma">Orientador</h2>
+						<a href="http://lattes.cnpq.br/7179984988211505" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team3.jpeg" class="img-responsive">
+							<ul class="text-center">
+								<li class="idioma">Graduando em Sistemas de Informação e bolsista de iniciação científica do Instituto Federal de Educação, Ciência e Tecnologia do Sudeste de Minas Gerais - Campus Juiz de Fora. Tem experiência na área de Ciência da Computação, com ênfase em Engenharia de Software.</li>
+							</ul>
+						</div>
+						<h1>Nathan Manera Magalhães</h1>
+						<h2 class="idioma">Bolsista do IFSUDESTEMG</h2>
+						<a href="http://lattes.cnpq.br/8900094088847517" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team4.jpeg" class="img-responsive">
+							<ul class="text-center">
+								<li class="idioma">Graduando em Sistemas de Informação no Instituto Federal do Sudeste de Minas Gerais - Campus Juiz de Fora. Tem experiência na área de Ciência da Computação, com ênfase em Sistemas de Informação.</li>
+							</ul>
+						</div>
+						<h1>Angelo C. Mendes da Silva</h1>
+						<h2 class="idioma">Bolsista de Iniciação Científica do CNPq</h2>
+						<a href="http://lattes.cnpq.br/9125845204227997" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team5.jpg" class="img-responsive">
+							<ul class="text-center">
+								<li class="idioma">Técnico em Informática, Graduando em Sistemas de Informação no Instituto Federal do Sudeste de Minas Gerais - Campus Juiz de Fora. Tem experiência na área de Sistemas de Informação com ênfase em Desenvolvimento Web.</li>
+							</ul>
+						</div>
+						<h1>Rafael Souza de Lana</h1>
+						<h2 class="idioma">Bolsista do IFSUDESTEMG</h2>
+						<a href="http://lattes.cnpq.br/9652406256823095" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team6.jpeg" class="img-responsive">
+							<ul class="text-center">
+								<li class="idioma">Possui ensino fundamental primeiro grau pelo Colégio santa Catarina (JF) (2014). Tem experiência na área de Ciência da Computação.</li>
+							</ul>
+						</div>
+						<h1>Pedro M. L. P. Abranches</h1>
+						<h2 class="idioma">Bolsista de Iniciação Científica Júnior do CNPq</h2>
+						<a href="http://lattes.cnpq.br/7322080884073657" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 profile">
+						<div class="img-box">
+							<img src="./images/sample/team7.png" class="img-responsive">
+							<ul class="text-center">
+								<li><p class="idioma">Possui ensino fundamental primeiro grau pelo Colégio Providência (2014). Tem experiência na área de Ciência da Computação.</p></li>
+							</ul>
+						</div>
+						<div class="info">
+							<h1>Thiago Silva Miranda</h1>
+							<h2 class="idioma">Bolsista de Iniciação Científica Júnior do CNPq</h2>
+						</div>
+						<a href="http://lattes.cnpq.br/5096088979637993" target="_blank"><div class="lattes"><i class="fa fa-user"><span class="text-vertical-center">Lattes</span></i></div></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<!-- Breve Informação -->
+	<!-- <aside class="call-to-action bg-primary default-color-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a href="#estudos" class="idioma btn btn-lg btn-light">Nossos estudos</a>
+					<a href="#" class="btn btn-lg btn-dark">Sobre</a>
+				</div>
+			</div>
+		</div>
+	</aside> -->
+
+	<!-- RODAPÉ / FOOTER -->
+	<footer id="contato" class="rodape">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<h4 class="idioma">Endereço / Contato</h4>
+					<p class="idioma">Rua Bernardo Mascarenhas, 1283 - Bairro Fábrica</p>
+					<p class="idioma">Juiz de Fora, MG. CEP: 36080-001</p>
+					<ul class="list-unstyled contact">
+						<li>
+							<i class="fa fa-phone fa-fw"></i>
+							(32) 4009-3003
+						</li>
+						<!--<li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">support@email.com </a></li>-->
+						<li>
+							<i class="fa fa-globe fa-fw"></i>
+							<a href="http://www.jf.ifsudestemg.edu.br" target="_blank">www.jf.ifsudestemg.edu.br</a>
+						</li>
+					</ul>
+					<br>
+					<ul class="list-inline social">
+						<li>
+							<a href="https://www.facebook.com/campusjuizdefora/?fref=ts" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="https://github.com/esifjf" target="_blank"><i class="fa fa-github fa-fw fa-3x"></i></a>
+						</li>
+					</ul>
+					<hr class="small">
+					<!-- <p class="idioma text-muted">Copyright &copy; Grupo de Pesquisa em Engenharia de Software 2016</p> -->
+				</div>
+			</div>
+		</div>
+		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Menu JavaScript -->
+	<script>
+	// Fecha o menu
+	$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+	});
+	// Abre o menu
+	$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+	});
+	// Rolagem
+	$(function() {
+		$('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+	// Top
+	var fixed = false;
+	$(document).scroll(function() {
+		if ($(this).scrollTop() > 250) {
+			if (!fixed) {
+				fixed = true;
+				// $('#to-top').css({position:'fixed', display:'block'});
+				$('#to-top').show("slow", function() {
+					$('#to-top').css({
+						position: 'fixed',
+						display: 'block'
+					});
+				});
+			}
+		} else {
+			if (fixed) {
+				fixed = false;
+				$('#to-top').hide("slow", function() {
+					$('#to-top').css({
+						display: 'none'
+					});
+				});
+			}
+		}
+	});
+	</script>
 </body>
 </html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Início</title>
+	<link rel="shortcut icon" href="../images/ico/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="../js/carrega-pagina.js"></script>
+	<script type="text/javascript">checkLanguage('complexity_tool_');</script>
+</head>
+
+<body onload="setLanguage(localStorage.getItem('file_name'),localStorage.getItem('language'))">
+	<div id="result"></div> 
+	<a id="menu-toggle" href="../#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+	<!-- MENU -->
+	<nav id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+			<a id="menu-close" href="../#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+			<li class="sidebar-brand">
+				<p>Complexity Tool</p>
+			</li>
+			<li>
+				<a href="../" class="idioma link" onclick=$("#menu-close").click();>Voltar</a>
+			</li>
+			<li>
+				<a href="#sobre" class="idioma" onclick=$("#menu-close").click();>Sobre</a>
+			</li>
+			<li>
+				<a href="#estudos" class="idioma" onclick=$("#menu-close").click();>Estudos</a>
+			</li>
+			<li>
+				<a href="#funcionamento" class="idioma" onclick=$("#menu-close").click();>Funcionamento</a>
+			</li>
+			<li>
+				<a href="#imagens" class="idioma" onclick=$("#menu-close").click();>Imagens</a>
+			</li>
+			<li>
+				<a href="#videos" class="idioma" onclick=$("#menu-close").click();>Vídeos</a>
+			</li>
+			<li>
+				<a href="#contribuicoes" class="idioma" onclick=$("#menu-close").click();>Contribuições</a>
+			</li>
+			<li>
+				<a href="#contato" class="idioma" onclick=$("#menu-close").click();>Contato</a>
+			</li>
+		</ul>
+	</nav>
+		
+	<!-- HEADER -->
+	<header id="top" class="header">
+		<div class="bg-header">
+			<div class="flag">
+				<span onclick="setLanguage('complexity_tool_','pt_br')"><img src="../images/language/pt.png" alt="português brasil"/></span>
+				<span onclick="setLanguage('complexity_tool_','en')"><img src="../images/language/en.png" alt="inglês"/></span>
+			</div>
+			<div class="logo"><img src="../images/logo.png" alt="Logo IF Sudeste MG"/></div>
+			<div class="text-vertical-center header-info">
+				<h2>Complexity Tool</h2>
+				<h3 class="idioma">Ferramenta para Medir Complexidade Ciclomática de Métodos Java</h3><br>
+				<a href="#sobre" class="down">
+					<div class="fa-stack fa-1x default-color">
+						<i class="fa fa-angle-down fa-stack-2x text-primary default-color"></i>
+					</div>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- SOBRE / ABOUT -->
+	<section id="sobre" class="sobre">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h3 class="idioma">Uma ferramenta desenvolvida na linguagem Java com o objetivo de analisar métodos de uma determinada classe Java e gerar seu Grafo de Controle de Fluxo correspondente.</h3>
+					<div class="funcoes">
+						<h3 class="idioma">Funções:</h3>
+						<ul class="lista-funcoes">
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="idioma">Deve gerar um grafo da Complexidade Ciclomática para cada método da classe analisada</span></li>
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="idioma">Deve permitir ao desenvolvedor navegar pelos caminhos independentes dos grafos gerados</span></li>
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="idioma">Deve fornecer uma análise sobre os grafos gerados contendo caminhos independentes, condições para que esses caminhos sejam satisfeitos e a Complexidade Ciclomática do método analisado</span></li>
+							<li><i class="fa fa-angle-right" aria-hidden="true"></i> <span class="idioma">Deve facilitar o entendimento do grafo através da indicação do trecho de código correspondente a cada vértice</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ESTUDOS / RESEARCH -->
+	<section id="estudos" class="estudos bg-primary default-color-bg">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-10 col-lg-offset-1">
+					<h1 class="idioma">Estudos</h1>
+					<hr class="small">
+					<div class="row">
+						<div class="col-md-12 col-sm-12 estudo-item">
+							<i class="devicon-java-plain fa-5x ferramenta"></i>
+							<h4 class="idioma tipo-ferramenta">Complexity Tool</h4>
+							<p class="idioma">Ferramenta para Medir Complexidade Ciclomática de Métodos Java.</p>
+							<a href="../ferramentas/complexity-tool.html" class="idioma btn btn-light">Saiba mais</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FUNCIONAMENTO / OPERATION -->
+	<aside id="funcionamento" class="publicacoes">
+		<div class="titulo-publicacao">
+			<h1 class="idioma">Etapas do funcionamento</h1>
+			<hr class="small">
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="alinha">Scanner</h1>
+			<h1 class="alinha"><i class="fa fa-file-code-o" aria-hidden="true"></i></h1>
+			<h3 class="idioma">Para essa atividade, é utilizada uma biblioteca de código fonte aberto <a href="https://github.com/javaparser/javaparser" target="_blank">JavaParser</a>. A biblioteca é capaz de ler arquivos de código fonte na linguagem Java e disponibilizar uma Abstract Syntax Tree (AST), representando a estrutura do código fonte lido e possibilitando a coleta de informações sobre o mesmo.</h3>
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="alinha">Parser</h1>
+			<h1 class="alinha"><i class="fa fa-gears" aria-hidden="true"></i></h1>
+			<h3 class="idioma">Nessa atividade é necessário processar a AST para gerar uma estrutura de grafos que represente o código fonte. Para isso, é utilizado um Recursive Descent Parser que permite processar a AST a partir de regras para blocos de comando. Foram criadas regras para os seguintes blocos de comando: if / else, switch / case, for-each, for, while, do-while, return, break.</h3>
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="alinha pt">Renderer</h1>
+			<h1 class="alinha"><i class="fa fa-laptop" aria-hidden="true"></i></h1>
+			<h3 class="idioma">A partir do momento que se tem a estrutura do grafo da Complexidade Ciclomática, deve-se renderizá-lo na tela para o usuário. Para isso, utiliza-se a biblioteca <a href="http://jung.sourceforge.net/" target="_blank">JUNG (Java Universal Network/Graph Framework</a>, também de código aberto.</h3>
+		</div>
+		<div class="tipo-publicacao">
+			<h1 class="alinha pt">Analysis</h1>
+			<h1 class="alinha"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
+			<h3 class="idioma">
+				Possuindo o grafo renderizado, é possível realizar análises estáticas sobre o mesmo. Exemplo de análise é a geração dos caminhos independentes e cálculo da Complexidade Ciclomática. Para a geração dos caminhos independentes, é usado um método conhecido como baseline method:
+			</h3>
+			<h3 class="idioma"><i class="fa fa-angle-right" aria-hidden="true"></i>Partindo do nó inicial até o nó final do grafo, calcula-se o caminho mais à esquerda (leftmost path), chamado de caminho base;</h3>
+			<h3 class="idioma"><i class="fa fa-angle-right" aria-hidden="true"></i>A partir do caminho base, para cada nó predicado, cria-se um novo caminho invertendo a condição do nó. Repete-se esse passo enquanto houverem nós predicados que não foram invertidos. Ao final, tem-se um caminho base somado à quantidade de caminhos independentes derivados (de acordo com a existência de nós predicados no grafo).</h3>
+		</div>
+	</aside>
+
+	<!-- IMAGENS DA COMPLEXITY TOOL -->
+	<section id="imagens" class="container imagens">
+		<div class="col-lg-10 col-lg-offset-1">
+			<h1 class="idioma">Imagens da Complexity Tool</h1>
+			<hr class="small"><br>
+			<div class="row">
+				<div class="col-lg-12 img-ferramenta">
+					<input type="hidden" name="diretorio" id="diretorio" value="../images/screenshots/complexity-tool/">
+					<div class="col-sm-4 galeria direita">
+						<img src="../images/screenshots/complexity-tool/img1.png" onClick="imgZoom(0);" />
+					</div>
+					<div class="col-sm-4 galeria direita">
+						<img src="../images/screenshots/complexity-tool/img2.png" onClick="imgZoom(1);" />
+					</div>
+					<div class="col-sm-4 galeria">
+						<img src="../images/screenshots/complexity-tool/img3.png" onClick="imgZoom(2);" />
+					</div>
+					<div class="col-sm-6 galeria direita cima">
+						<img src="../images/screenshots/complexity-tool/img4.png" onClick="imgZoom(3);" />
+					</div>
+					<div class="col-sm-6 galeria cima">
+						<img src="../images/screenshots/complexity-tool/img5.png" onClick="imgZoom(4);" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 img-ferramenta">
+					<div class="col-md-6">
+						<h2 class="idioma">Grafo e código originais</h2>
+						<div class="galeria"><img src="../images/screenshots/complexity-tool/img6.png" onClick="imgZoom(5);"/></div>
+					</div>
+					<div class="col-md-6">
+						<h2 class="idioma">Grafo e código refatorados</h2>
+						<div class="galeria"><img src="../images/screenshots/complexity-tool/img7.png" onClick="imgZoom(6);"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- VIDEOS-->
+	<section id="videos" class="videos container">
+		<div class="col-lg-10 col-lg-offset-1">
+			<h1 class="idioma">Vídeos</h1>
+			<hr class="small">
+			<div class="row">
+				<div class="col-sm-12 conteudo-video">
+					<div class="col-sm-6 item-video">
+						<iframe src="https://www.youtube.com/embed/cCPu1H8-Apk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen>
+							<p>Your browser does not support this type of content.</p>
+						</iframe>
+					</div>
+					<div class="col-sm-6 desc-video">
+						<h3 class="text-vertical-center idioma">Apresentação da ferramenta Complexity Tool desenvolvida ao longo do projeto, em apoio ao teste de software.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CONTRIBUIÇÕES / CONTRIBUTIONS -->
+	<section id="contribuicoes" class="estudos bg-primary contribuicoes">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-12">
+					<h1 class="idioma">Contribuições</h1>
+					<hr class="small">
+					<div class="row group">
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-3 col-sm-6 estudo-item">
+								<i class="fa fa-cubes fa-5x" aria-hidden="true"></i>
+								<div class="contribuicao">
+									<h4 class="tipo-ferramenta text-vertical-center idioma">Melhoria da qualidade dos produtos de software</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 estudo-item">
+								<i class="fa fa-sitemap fa-5x" aria-hidden="true"></i>
+								<div class="contribuicao">
+									<h4 class="tipo-ferramenta text-vertical-center idioma">Otimização da utilização de recursos</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 estudo-item">
+								<!-- <i class="fa fa-wrench fa-stack-2x" aria-hidden="true"></i> -->
+								<i class="fa fa-bar-chart fa-5x" aria-hidden="true"></i>
+								<div class="contribuicao">
+									<h4 class="tipo-ferramenta text-vertical-center idioma">Diminuição de retrabalho</h4>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 estudo-item">
+								<i class="fa fa-thumbs-up fa-5x" aria-hidden="true"></i>
+								<div class="contribuicao">
+									<h4 class="tipo-ferramenta text-vertical-center idioma">Apoio à criação de testes de unidade</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- BREVE INFORMAÇÃO / SHORT INFORMATION -->
+	<aside class="call-to-action bg-primary info-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<h3 class="idioma">A Complexity Tool está em desenvolvimento. Quando estiver funcional, a mesma será incorporada como uma extensão das IDEs NetBeans e Eclipse, possibilitando ao usuário rápido acesso às suas funcionalidades enquanto estiver programando.</h3>
+					<!-- <a href="#" class="btn btn-lg btn-dark">Eclipse</a>
+					<a href="#" class="btn btn-lg btn-dark">Netbeans</a> -->
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<!-- RODAPÉ / FOOTER -->
+	<footer id="contato" class="rodape">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<h4 class="idioma">Endereço / Contato</h4>
+					<p class="idioma">Rua Bernardo Mascarenhas, 1283 - Bairro Fábrica</p>
+					<p class="idioma">Juiz de Fora, MG. CEP: 36080-001</p>
+					<ul class="list-unstyled contact">
+						<li>
+							<i class="fa fa-phone fa-fw"></i>
+							(32) 4009-3003
+						</li>
+						<li>
+							<i class="fa fa-globe fa-fw"></i>
+							<a href="http://www.jf.ifsudestemg.edu.br" target="_blank">www.jf.ifsudestemg.edu.br</a>
+						</li>
+					</ul>
+					<br>
+					<ul class="list-inline social">
+						<li>
+							<a href="https://www.facebook.com/campusjuizdefora/?fref=ts" target="_blank"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+						</li>
+						<li>
+							<a href="https://github.com/esifjf" target="_blank"><i class="fa fa-github fa-fw fa-3x"></i></a>
+						</li>
+					</ul>
+					<hr class="small">
+				</div>
+			</div>
+		</div>
+		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="../js/jquery.js"></script>
+
+	<!-- Bootstrap JavaScript -->
+	<script src="../js/bootstrap.min.js"></script>
+
+	<!-- Menu JavaScript -->
+	<script>
+	// Fecha o menu
+	$("#menu-close").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+	});
+	// Abre o menu
+	$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#sidebar-wrapper").toggleClass("active");
+	});
+	// Rolagem
+	$(function() {
+		$('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html,body').animate({
+							scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+	// Top
+	var fixed = false;
+	$(document).scroll(function() {
+		if ($(this).scrollTop() > 250) {
+			if (!fixed) {
+				fixed = true;
+				// $('#to-top').css({position:'fixed', display:'block'});
+				$('#to-top').show("slow", function() {
+					$('#to-top').css({
+						position: 'fixed',
+						display: 'block'
+					});
+				});
+			}
+		} else {
+			if (fixed) {
+				fixed = false;
+				$('#to-top').hide("slow", function() {
+					$('#to-top').css({
+						display: 'none'
+					});
+				});
+			}
+		}
+	});
+	</script>
+	<!-- Zoom -->
+	<div id="bg-zoom">
+		<div id="close-div"><i id="close" class="fa fa-times" onClick="imgZoom('close');"></i></div>
+		<h1 onclick="imgZoom('previous')" class="btn-paginacao btn-voltar"><i class="fa fa-chevron-left" aria-hidden="true"></i></h1>
+		<div id="bg-zoom-img"></div>
+		<h1 onclick="imgZoom('next')" class="btn-paginacao btn-proximo"><i class="fa fa-chevron-right" aria-hidden="true"></i></h1>
+	</div>
+</body>
+</html>
